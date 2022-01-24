@@ -31,6 +31,9 @@ function renderCoffee(coffee) {
     const likeBtn = document.createElement("button")
     likeBtn.innerText = "Like ❤️"
 
+    const likes = document.createElement('p')
+    likes.innerText = 0
+
     likeBtn.addEventListener('click', () => {
         // console.log(+likes.innerText + 1)
         // grab the p tag text content
@@ -40,7 +43,7 @@ function renderCoffee(coffee) {
         likes.innerText = newLikes
     })
 
-    coffeeCard.append(coffeeTitle, coffeeDes, ingredients, likeBtn)
+    coffeeCard.append(coffeeTitle, coffeeDes, ingredients, likeBtn, likes)
 
     document.getElementById("coffee-collection").appendChild(coffeeCard)
 
