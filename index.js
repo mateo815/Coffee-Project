@@ -12,7 +12,6 @@ fetch(hotURL)
 
 
 function renderCoffee(coffee) {
-    //do some stuff with ONE toy
 
     const coffeeCard = document.createElement("div");
     coffeeCard.className = "card"
@@ -22,8 +21,6 @@ function renderCoffee(coffee) {
 
     const coffeeDes = document.createElement("p")
     coffeeDes.innerText = coffee.description
-    // toyImg.className = "toy-avatar"
-
 
     const ingredients = document.createElement("p")
     ingredients.innerText = coffee.ingredients.join(', ')
@@ -51,3 +48,20 @@ function renderCoffee(coffee) {
     document.getElementById("coffee-collection").appendChild(coffeeCard)
 
 }
+
+topButton = document.getElementById("topBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = () => scrollFunction();
+
+function scrollFunction() {
+    if (document.documentElement.scrollTop > 20) {
+        topButton.style.display = "block"
+    } else {
+        topButton.style.display = "none";
+    }
+}
+topButton.addEventListener('click', () => window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+}));
