@@ -1,0 +1,13 @@
+#coffee-header {
+    display: flex;
+    justify-content: center;
+    background: #e4cea8;
+    opacity: .8;
+    height: 7rem;
+    padding: 1rem;
+  }
+
+  #coffee-header img {
+    height: 6rem;
+    width: auto;
+  }
