@@ -3,11 +3,13 @@
     justify-content: center;
     background: #e4cea8;
     opacity: .8;
-    height: 7rem;
+    height: 10rem;
     padding: 1rem;
   }
+  /* test */
 
   #coffee-header img {
-    height: 6rem;
+    height: 10rem;
     width: auto;
+    mix-blend-mode: multiply;
   }
