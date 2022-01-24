@@ -26,21 +26,24 @@ function renderCoffee(coffee) {
 
 
     const ingredients = document.createElement("p")
-    ingredients.innerText = coffee.ingredients
+    ingredients.innerText = coffee.ingredients.join(', ')
 
     const likeBtn = document.createElement("button")
     likeBtn.innerText = "Like ❤️"
 
-    const likes = document.createElement('p')
-    likes.innerText = 0
+    let likes = document.createElement('p')
+    likes.innerText = `0 Like(s)`
 
     likeBtn.addEventListener('click', () => {
         // console.log(+likes.innerText + 1)
         // grab the p tag text content
         // turn it into a number, and add 1
-        const newLikes = +likes.innerText + 1
+        let newLikes = `${parseInt(likes.innerText) + 1
+            } Like(s)`
+
         // tell the p tags text to look like that new value
         likes.innerText = newLikes
+        //console.log(parseInt(likes.innerText) + 1)
     })
 
     coffeeCard.append(coffeeTitle, coffeeDes, ingredients, likeBtn, likes)
