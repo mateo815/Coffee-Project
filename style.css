@@ -29,9 +29,12 @@ body {
     display: inline-grid;
     margin: 1rem 2rem;
     box-shadow: 3px 4px #e4cea8
+    
   }
   .card:hover{
-      background-color: #e4cea8
+      background-color: #e4cea8;
+      box-shadow: 1px 1px #666;
+      transform: translateY(1px);
   }
 
 button {
@@ -87,4 +90,6 @@ button:active {
   
   #topBtn:hover {
     background-color: #e4cea8; /* Add a dark-grey background on hover */
+    box-shadow: 0 2px #666;
+    transform: translateY(1px);
   }
