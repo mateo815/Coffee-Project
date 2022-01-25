@@ -1,5 +1,4 @@
 body {
-
     margin: 0;
     font-family: monospace;
   }
@@ -37,7 +36,24 @@ body {
       transform: translateY(1px);
   }
 
-button {
+  #overview{
+    display: flex;
+    justify-content: center;
+
+  }
+
+#hotBtn, #coldBtn{
+    border-radius: 25px;
+    position: absolute, bottom center;
+    border: grey solid 1px;
+    height: 3rem;
+    width: 10rem;
+    text-align: center;
+    justify-self: center;
+    box-shadow: 0 3px #999;
+  }
+
+#coffee-collection button {
     border-radius: 25px;
     position: absolute, bottom center;
     border: grey solid 1px;
@@ -47,10 +63,10 @@ button {
     justify-self: center;
     box-shadow: 0 3px #999;
 }
-button:hover{
+#coffee-collection button:hover{
     cursor: pointer;
 }
-button:active {
+#coffee-collection button:active {
     background-color: #d86f86;
     box-shadow: 0 2px #666;
     transform: translateY(1px);

@@ -1,14 +1,39 @@
 const coldURL = 'https://api.sampleapis.com/coffee/iced';
 const hotURL = 'https://api.sampleapis.com/coffee/hot';
 
-fetch(coldURL)
-    .then(resp => resp.json())
-    .then(data => console.log(data));
+function fetchColdCoffee() {
+    fetch(coldURL)
+        .then(resp => resp.json())
+        .then(coldData => coldData.forEach(renderCoffee));
+}
 
 
-fetch(hotURL)
-    .then(resp => resp.json())
-    .then(data => data.forEach(renderCoffee));
+function fetchHotCoffee() {
+    fetch(hotURL)
+        .then(resp => resp.json())
+        .then(hotData => hotData.forEach(renderCoffee));
+}
+
+//event listeners for cold/hot buttons to toggle between them
+const coffeeDivs = document.getElementById('coffee-collection')
+
+const coldButton = document.getElementById('coldBtn')
+coldButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    coffeeDivs.innerHTML = ''
+    fetchColdCoffee()
+
+    console.log('test')
+})
+
+const hotButton = document.getElementById('hotBtn')
+hotButton.addEventListener('click', (e) => {
+    e.preventDefault()
+    coffeeDivs.innerHTML = ''
+    fetchHotCoffee()
+    console.log('test')
+})
+//------------------------------------------------
 
 
 function renderCoffee(coffee) {
