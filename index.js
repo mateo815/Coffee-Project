@@ -1,20 +1,29 @@
 const coldURL = 'https://api.sampleapis.com/coffee/iced';
 const hotURL = 'https://api.sampleapis.com/coffee/hot';
 
+
+//Fetch requests-----------------------------------------------------------
 function fetchColdCoffee() {
     fetch(coldURL)
         .then(resp => resp.json())
-        .then(coldData => coldData.forEach(renderCoffee));
+        .then(coldData => {
+            coldData.splice(7, 2)//remove 2 duplicates at the end
+            coldData.forEach(renderCoffee);
+        })
 }
-
 
 function fetchHotCoffee() {
     fetch(hotURL)
         .then(resp => resp.json())
-        .then(hotData => hotData.forEach(renderCoffee));
+        .then(hotData => {
+            hotData.splice(20, 1) //remove the black object in json
+            hotData.forEach(renderCoffee);
+        })
 }
+//-------------------------------------------------------------------------
 
-//event listeners for cold/hot buttons to toggle between them
+
+//event listeners for cold/hot buttons to toggle between them--------------
 const coffeeDivs = document.getElementById('coffee-collection')
 
 const coldButton = document.getElementById('coldBtn')
@@ -36,7 +45,7 @@ hotButton.addEventListener('click', (e) => {
     e.preventDefault()
     console.log('test')
 })
-//------------------------------------------------
+//-------------------------------------------------------------------------
 
 
 function renderCoffee(coffee) {
@@ -77,6 +86,7 @@ function renderCoffee(coffee) {
 
 }
 
+//Button to scroll back to the top of the page-----------------------------------------
 topButton = document.getElementById("topBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -93,18 +103,28 @@ topButton.addEventListener('click', () => window.scrollTo({
     top: 0,
     behavior: 'smooth',
 }));
-
-
-
+//---------------------------------------------------------------------------------------
 
 const collectionDiv = document.getElementById('coffee-collection')
 
-function coldClick() { 
+function coldClick() {
     collectionDiv.style.background = 'lightblue'
 
 }
 
-function hotClick() { 
+function hotClick() {
     collectionDiv.style.background = 'orange'
 
 }
+
+function replacer(description, value) {
+    // Filtering out properties
+    if (value === '') {
+        return undefined;
+    }
+    return value;
+}
+
+var foo = { foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7 };
+JSON.stringify(foo, replacer);
+  // '{"week":45,"month":7}'
