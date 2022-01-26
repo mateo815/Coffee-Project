@@ -40,6 +40,9 @@ body {
   #type-buttons{
     display: flex;
     justify-content: center;
+    background-color: #e4cea8;
+    border-style: solid;
+    border-color: black;
   }
 
   #hotBtn, #coldBtn{
