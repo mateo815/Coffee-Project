@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: center;
     background-color: #e4cea8;
-    border-style: solid;
+    border-style: double;
     border-color: black;
   }
 
@@ -54,6 +54,7 @@ body {
     justify-content: center;
     box-shadow: 0 3px #999;
     top: 19%;
+    margin: 20px
   }
 
 #coffee-collection button {
