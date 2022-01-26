@@ -36,10 +36,9 @@ body {
       transform: translateY(1px);
   }
 
-  #overview{
+  #type-buttons{
     display: flex;
     justify-content: center;
-
   }
 
   #hotBtn, #coldBtn{
@@ -48,10 +47,9 @@ body {
     height: 3rem;
     width: 10rem;
     text-align: center;
-    justify-self: center;
+    justify-content: center;
     box-shadow: 0 3px #999;
     top: 19%;
-    transform: translateX(500%);
   }
 
 #coffee-collection button {
