@@ -11,7 +11,6 @@ function fetchColdCoffee() {
             coldData.forEach(renderCoffee);
         })
 }
-
 function fetchHotCoffee() {
     fetch(hotURL)
         .then(resp => resp.json())
@@ -116,15 +115,3 @@ function hotClick() {
     collectionDiv.style.background = 'orange'
 
 }
-
-function replacer(description, value) {
-    // Filtering out properties
-    if (value === '') {
-        return undefined;
-    }
-    return value;
-}
-
-var foo = { foundation: 'Mozilla', model: 'box', week: 45, transport: 'car', month: 7 };
-JSON.stringify(foo, replacer);
-  // '{"week":45,"month":7}'
