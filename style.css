@@ -42,15 +42,16 @@ body {
 
   }
 
-#hotBtn, #coldBtn{
+  #hotBtn, #coldBtn{
     border-radius: 25px;
-    position: absolute, bottom center;
     border: grey solid 1px;
     height: 3rem;
     width: 10rem;
     text-align: center;
     justify-self: center;
     box-shadow: 0 3px #999;
+    top: 19%;
+    transform: translateX(500%);
   }
 
 #coffee-collection button {
