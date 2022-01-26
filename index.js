@@ -15,7 +15,7 @@ function fetchHotCoffee() {
     fetch(hotURL)
         .then(resp => resp.json())
         .then(hotData => {
-            hotData.splice(20, 1) //remove the black object in json
+            hotData.splice(20, 1) //remove the blank object in json
             hotData.forEach(renderCoffee);
         })
 }
@@ -30,9 +30,7 @@ coldButton.addEventListener('click', (e) => {
     e.preventDefault()
     coffeeDivs.innerHTML = ''
     fetchColdCoffee()
-    addEventListener('click', coldClick)
-    e.preventDefault()
-    console.log('test')
+    coffeeDivs.style.background = 'lightblue'
 })
 
 const hotButton = document.getElementById('hotBtn')
@@ -40,9 +38,7 @@ hotButton.addEventListener('click', (e) => {
     e.preventDefault()
     coffeeDivs.innerHTML = ''
     fetchHotCoffee()
-    addEventListener('click', hotClick)
-    e.preventDefault()
-    console.log('test')
+    coffeeDivs.style.background = 'orange'
 })
 //-------------------------------------------------------------------------
 
@@ -104,14 +100,5 @@ topButton.addEventListener('click', () => window.scrollTo({
 }));
 //---------------------------------------------------------------------------------------
 
-const collectionDiv = document.getElementById('coffee-collection')
 
-function coldClick() {
-    collectionDiv.style.background = 'lightblue'
 
-}
-
-function hotClick() {
-    collectionDiv.style.background = 'orange'
-
-}
