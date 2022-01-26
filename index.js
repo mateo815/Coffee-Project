@@ -21,6 +21,12 @@ function fetchHotCoffee() {
 }
 //-------------------------------------------------------------------------
 
+document.addEventListener('DOMContentLoaded', (e) => {
+    fetchHotCoffee()
+    coffeeDivs.style.background = 'maroon'
+})
+
+
 
 //event listeners for cold/hot buttons to toggle between them--------------
 const coffeeDivs = document.getElementById('coffee-collection')
