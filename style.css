@@ -19,6 +19,7 @@ body {
   }
 
   .card {
+    background-color: rgb(233, 233, 233);
     border-radius: 25px;
     text-align: center;
     border: grey solid 1px;
