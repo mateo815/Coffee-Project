@@ -22,7 +22,8 @@ coldButton.addEventListener('click', (e) => {
     e.preventDefault()
     coffeeDivs.innerHTML = ''
     fetchColdCoffee()
-
+    addEventListener('click', coldClick)
+    e.preventDefault()
     console.log('test')
 })
 
@@ -31,6 +32,8 @@ hotButton.addEventListener('click', (e) => {
     e.preventDefault()
     coffeeDivs.innerHTML = ''
     fetchHotCoffee()
+    addEventListener('click', hotClick)
+    e.preventDefault()
     console.log('test')
 })
 //------------------------------------------------
@@ -90,3 +93,18 @@ topButton.addEventListener('click', () => window.scrollTo({
     top: 0,
     behavior: 'smooth',
 }));
+
+
+
+
+const collectionDiv = document.getElementById('coffee-collection')
+
+function coldClick() { 
+    collectionDiv.style.background = 'lightblue'
+
+}
+
+function hotClick() { 
+    collectionDiv.style.background = 'orange'
+
+}
