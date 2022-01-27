@@ -36,28 +36,39 @@ body {
       box-shadow: 1px 1px #666;
       transform: translateY(1px);
   }
+  
+  #buttons-title{
+    display: flex;
+    justify-content: center;
+    background-color: #e4cea8;
+    align-items: center;
+    border-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
 
   #type-buttons{
     display: flex;
     justify-content: center;
     background-color: #e4cea8;
-    border-style: double;
+    align-items: center;
     border-color: black;
+    
   }
 
   #hotBtn, #coldBtn{
     border-radius: 25px;
     border: grey solid 1px;
-    height: 3rem;
-    width: 10rem;
+    height: 25px;
+    width: 50px;
     text-align: center;
     justify-content: center;
     box-shadow: 0 3px #999;
     top: 19%;
-    margin: 20px
+    margin: 20px;
   }
 
-#coffee-collection button {
+
+button {
     border-radius: 25px;
     position: absolute, bottom center;
     border: grey solid 1px;
@@ -66,12 +77,14 @@ body {
     text-align: center;
     justify-self: center;
     box-shadow: 0 3px #999;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
-#coffee-collection button:hover{
+button:hover{
     cursor: pointer;
 }
-#coffee-collection button:active {
-    background-color: #d86f86;
+button:active {
+    background-color: #8b8b8b;
     box-shadow: 0 2px #666;
     transform: translateY(1px);
   }
@@ -81,7 +94,7 @@ body {
     justify-self: center;
 }
 
-  #coffee-collection p:nth-of-type(2) {
+#coffee-collection p:nth-of-type(2) {
     height: 50px;
     justify-self: center;
 }

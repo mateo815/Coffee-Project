@@ -59,7 +59,7 @@ function renderCoffee(coffee) {
 
     const coffeeDes = document.createElement("p")
     coffeeDes.innerText = coffee.description
-    
+
 
     const ingredients = document.createElement("p")
     ingredients.innerText = coffee.ingredients.join(', ')
@@ -76,7 +76,7 @@ function renderCoffee(coffee) {
 
         // tell the p tags text to look like that new value
         likes.innerText = newLikes
-        
+
         //console.log(parseInt(likes.innerText) + 1)
     })
 
