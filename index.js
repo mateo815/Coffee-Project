@@ -59,6 +59,7 @@ function renderCoffee(coffee) {
 
     const coffeeDes = document.createElement("p")
     coffeeDes.innerText = coffee.description
+    
 
     const ingredients = document.createElement("p")
     ingredients.innerText = coffee.ingredients.join(', ')
@@ -67,7 +68,7 @@ function renderCoffee(coffee) {
     likeBtn.innerText = "Like ❤️"
 
     let likes = document.createElement('p')
-    likes.innerText = `0 Like(s)`
+    likes.innerText = `${Math.floor(Math.random() * 11)} Like(s)`
 
     likeBtn.addEventListener('click', () => {
         let newLikes = `${parseInt(likes.innerText) + 1
